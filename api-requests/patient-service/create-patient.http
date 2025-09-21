@@ -1,11 +1,11 @@
-### GET request to example server
+### create a patient request to example server
 POST http://localhost:4000/patients
 Content-Type: application/json
 
 {
-  "name" : "John Doe",
+  "name" : "John Doe22",
   "email": "test@example.com",
-  "address": "123 main street",
+  "address": "123 main street22",
   "dateOfBirth": "1995-09-09",
   "registeredDate": "2024-11-28"
 }
