@@ -4,12 +4,12 @@ FROM maven:3.9.9-eclipse-temurin-21 AS builder
 WORKDIR /app
 
 # 1️⃣ Copy only the service module’s pom.xml first so dependency downloads are cached
-COPY patient-service/pom.xml .
+COPY pom.xml .
 
 RUN mvn dependency:go-offline -B
 
 # 2️⃣ Copy the service module’s source code
-COPY patient-service/src ./src
+COPY src ./src
 
 # 3️⃣ Build the jar (tests will run normally)
 RUN mvn clean package
